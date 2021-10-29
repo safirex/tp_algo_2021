@@ -1,0 +1,14 @@
+operateurs\selections\Tournoi.class
+variables\Chromosome.class
+variables\Gene.class
+variables\Population.class
+operateurs\croisements\Croisement2Points.class
+Configurations\Config.class
+operateurs\selections\Roulette.class
+variables\Genotype.class
+problemes\Parallelepipede.class
+operateurs\croisements\Croisement.class
+operateurs\croisements\Croisement1Point.class
+operateurs\mutations\Uniforme.class
+variables\Individu.class
+variables\Allele.class
