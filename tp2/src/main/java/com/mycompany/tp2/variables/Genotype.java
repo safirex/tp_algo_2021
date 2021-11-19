@@ -27,8 +27,8 @@ public class Genotype {
 
 		for (int i = 0; i < nbGenes; i++){
 			genesVector[i] = new Gene(cfg.getMin(i), 
-									  cfg.getMax(i),					
-									  cfg.getPrecision(i), config);					
+                        cfg.getMax(i),					
+                        cfg.getPrecision(i), config);					
 		}
 	}
 

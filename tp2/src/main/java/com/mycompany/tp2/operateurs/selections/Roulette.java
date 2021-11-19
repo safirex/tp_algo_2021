@@ -21,8 +21,21 @@ public class Roulette {
 		config = cfg;
 	}
 	
+        /**
+         * 
+         * @return a randomly selected individual 
+         */
 	public Individu doSelect(){
-		return pop.get((int)Math.random()*pop.size());
+            int randFit = (int) (Math.random()*sumFitness(pop));
+            float addedFitness =0;
+            for (Individu elem :pop ){
+                addedFitness +=elem.getFitness();
+                if(addedFitness>randFit){
+                    //first selected individual
+                    return elem;
+                }
+            }
+            throw new UnknownError();
 	}
 	
 	public double sumFitness(List<Individu> pop){

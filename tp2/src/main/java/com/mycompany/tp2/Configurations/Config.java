@@ -5,11 +5,11 @@ import java.util.Random;
 public class Config {
 
 	private int taillePopulation =  100;  // Nombre de solutions evaluees A chaque generation.
-	private int nbGeneration = 		300; 	 // Nombre de generations
+	private int nbGeneration = 	300; 	 // Nombre de generations
 	
 	private double tauxCroisement = 0.8;  
 	private String typeCroisement = "1PX";
-	private double tauxMutation = 0.001;
+	private double tauxMutation = 0.1;
 	private double tauxRemplacement = 0.8; // Pourcentage de parents qui seront remplacEs par des solutions filles
 	
 	

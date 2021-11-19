@@ -7,6 +7,8 @@ import Configurations.Config;
 
 import operateurs.croisements.Croisement;
 import operateurs.croisements.Croisement1Point;
+import operateurs.croisements.Croisement2Points;
+import operateurs.selections.Roulette;
 import operateurs.selections.Tournoi;
 import variables.Genotype;
 import variables.Individu;
@@ -120,7 +122,9 @@ public class Parallelepipede {
 	
 	public List<Individu> regenerer(){
 		Tournoi selection = new Tournoi(popList, config);
-
+                //Roulette selection = new Roulette(popList, config);
+                
+                
 		List<Individu> newPopList = new ArrayList();
 
 		for (int i = 0; i < (int) popSize/2; i++){
@@ -129,7 +133,7 @@ public class Parallelepipede {
 			Individu parent1 = new Individu(selection.doSelect());
 			Individu parent2 = new Individu(selection.doSelect());
 
-			Croisement crossover = null;
+			Croisement crossover =new Croisement2Points(parent1, parent2, crossoverRate, config);
 			if (crossoverType.equalsIgnoreCase("1PX")){
 				crossover = new Croisement1Point(parent1,parent2, crossoverRate, config);
 			}
